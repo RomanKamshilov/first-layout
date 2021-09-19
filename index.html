@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Барбершоп «Бородинский»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="main-header">
@@ -18,7 +21,9 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <ul class="user-navigation">
-                <li class="login-link">Вход</li>
+                <li class="login-link">
+                    <a class="login-link" href="login.html">Вход</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -44,51 +49,73 @@
             </ul>
         </section>
 
-        <section class="news">
-            <h2>Новости</h2>
-            <ul class="news-list">
-                <li class="news-item">
-                    <p>Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
-                    <time datetime="2021-08-31">30 августа</time>
-                </li>
-                <li class="news-item">
-                    <p>В нашей команде пополнение, Борис «бритва» стригунец, обладaтель множества титулов и наград пополнил наши стройные ряды</p>
-                    <time datetime="2021-08-31">30 сентября</time>
-                </li>
-            </ul>
-            <a class="button" href="news.html">Все новости</a>
-        </section>
+        <div class="index-columns">
+            <section class="news">
+                <h2>Новости</h2>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <p>Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
+                        <time datetime="2021-08-31">30 августа</time>
+                    </li>
+                    <li class="news-item">
+                        <p>В нашей команде пополнение, Борис «бритва» стригунец, обладaтель множества титулов и наград пополнил наши стройные ряды</p>
+                        <time datetime="2021-08-31">30 сентября</time>
+                    </li>
+                </ul>
+                <a class="button" href="news.html">Все новости</a>
+            </section>
 
-        <section class="gallery">
-            <h2>Фотогалерея</h2>
-            <figure class="gallery-content">
-                <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер" /></a>
-            </figure>
-            <span class="button gallery-button gallery-button-back">Назад</span>
-            <span class="button gallery-button gallery-button-next">Вперед</span>
-        </section>
+            <section class="gallery">
+                <h2>Фотогалерея</h2>
+                <figure class="gallery-content">
+                    <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер" /></a>
+                </figure>
+                <button class="button gallery-button gallery-button-back">Назад</button>
+                <button class="button gallery-button gallery-button-next">Вперед</button>
+            </section>
+        </div>
 
-        <section class="contacts">
-            <h2>Контактная информация</h2>
-            <p>
-                Барбершоп «Бородинский»<br>
-                Адрес: г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-                Тел.: +7 (812) 555-66-66
-            </p>
-            <p>
-                Время работы:<br>
-                пн-пт: с 10:00 до 22:00<br>
-                сб-вс: с 10:00 до 19:00
-            </p>
-            <a class="button" href="map.html">Как проехать</a>
-            <a class="button" href="contacts.html">Обратная связь</a>
-        </section>
+        <div class="index-columns">
+            <section class="contacts">
+                <h2>Контактная информация</h2>
+                <p>
+                    Барбершоп «Бородинский»<br>
+                    Адрес: г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+                    Тел.: +7 (812) 555-66-66
+                </p>
+                <p>
+                    Время работы:<br>
+                    пн-пт: с 10:00 до 22:00<br>
+                    сб-вс: с 10:00 до 19:00
+                </p>
+                <a class="button" href="map.html">Как проехать</a>
+                <a class="button" href="contacts.html">Обратная связь</a>
+            </section>
 
-        <section class="appointment">
-            <h2>Записаться</h2>
-            <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-            <!-- Здесь будет форма -->
-        </section>
+            <section class="appointment">
+                <h2>Записаться</h2>
+                <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+                <form class="appointment-form" action="#" method="post">
+                    <p class="appointment-item">
+                        <label for="appointment-date">Дата</label>
+                        <input id="appointment-date" type="text" name="date" value="" placeholder="18.09.2021">
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-time">Время</label>
+                        <input id="appointment-time" type="text" name="time" value="" placeholder="23:52">
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-name">Ваше имя</label>
+                        <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-phone">Телефон</label>
+                        <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 999 999-99-99">
+                    </p>
+                    <button class="button" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
     </main>
     <footer class="main-footer">
         <p class="footer-contacts">
@@ -104,7 +131,7 @@
             <ul>
                 <li><a class="social-button" href="#">Вконтакте</a></li>
                 <li><a class="social-button" href="#">Фейсбук</a></li>
-                <il><a class="social-button" href="#">Инстаграм</a></il>
+                <li><a class="social-button" href="#">Инстаграм</a></li>
             </ul>
         </div>
         <p class="footer-copyright">
@@ -116,13 +143,34 @@
     <section class="modal modal-login">
         <h2>Личный кабинет</h2>
         <p>Введите логин и пароль</p>
-        <!-- Здесь будет форма -->
-        <span class="modal-close">x</span>
+        <form class="login-form" action="#" method="post">
+            <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login-password-info">
+                <label class="login-checkbox">
+                    <input type="checkbox" name="remember" class="visually-hidden">
+                    <span class="checkbox-indicator"></span>
+                    Запомните меня
+                </label>
+                <a class="restore" href="#">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <span class="modal-close">x</span>
+        <p>
+            <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Бутлерова 6, Краснодар" />
+        </p>
+        <button type="button" class="modal-close">Закрыть</button>
     </section>
 </body>
 </html>
