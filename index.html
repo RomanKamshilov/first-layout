@@ -92,7 +92,7 @@
 					пн-пт: с 10:00 до 22:00<br>
 					сб-вс: с 10:00 до 19:00
 				</p>
-				<a class="button" href="map.html">Как проехать</a>
+				<a class="button contacts-button-map" href="map.html">Как проехать</a>
 				<a class="button" href="contacts.html">Обратная связь</a>
 			</section>
 
@@ -148,24 +148,24 @@
 			</div>
 			<p class="footer-copyright">
 				<b>Разработано:</b>
-				<a class="button" href="Мой сайт">RSKAMSHILOV</a>
+				<a class="button" href="Мой сайт">HTMLACADEMY</a>
 			</p>
 		</div>
 	</footer>
 
 	<section class="modal modal-login">
 		<h2>Личный кабинет</h2>
-		<p>Введите логин и пароль</p>
+		<p class="modal-description">Введите пожалуйста свой логин и пароль</p>
 		<form class="login-form" action="#" method="post">
 			<p>
 				<label class="visually-hidden" for="user-login">Логин</label>
-				<input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Логин">
+				<input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
 			</p>
 			<p>
 				<label class="visually-hidden" for="user-password">Пароль</label>
 				<input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
 			</p>
-			<p class="login-password-info">
+			<p class="login-help">
 				<label class="login-checkbox">
 					<input type="checkbox" name="remember" class="visually-hidden">
 					<span class="checkbox-indicator"></span>
@@ -185,5 +185,8 @@
 		</p>
 		<button type="button" class="modal-close">Закрыть</button>
 	</section>
+	<div class="modal-overlay"></div>
+	<script src="js/popup.js"></script>
+	<script src="js/map.js"></script>
 </body>
 </html>
